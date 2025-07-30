@@ -1,0 +1,14 @@
+.services-container h2 {
+    margin-bottom: 5 rem;
+}
+
+.services-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    height: 60rem;
+}
+
