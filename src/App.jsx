@@ -1,5 +1,4 @@
-import React from "react";
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React, {useRef} from "react";
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import Navbar from "./components/common/Navbar/Navbar";
@@ -7,49 +6,47 @@ import Contact from "./components/pages/Contact/Contact";
 import './App.css'
 import Services from "./components/pages/Services/Services";
 import Experience from "./components/pages/Experience/Experience";
-import Footer from "./components/pages/Footer/Footer";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-const routes = [
+const App = () => {
+  const parallaxRef = useRef();
+
+  const routes = [
   {
     path: '/richard_school',
-    element: <Home />
+    element: <Home parallaxRef={parallaxRef}/>
   },
   {
-    path: '/about',
+    path: '/richard_school/about',
     element: <About />
   },
   {
-    path: '/services',
+    path: '/richard_school/services',
     element: <Services />
   },
   {
-    path: '/experience',
+    path: '/richard_school/experience',
     element: <Experience />
   },
   {
-    path: '/contact',
+    path: '/richard_school/contact',
     element: <Contact />
   },
 ]
 
-const App = () => {
-
   return(
-    <Router>
-      <Navbar />
-      <Routes>
+    <div>
+      <Navbar onNavigate={(page) => parallaxRef.current.scrollTo(page)}/>
+      <Parallax pages={5} ref={parallaxRef}>
         {
-          routes.map(({path, element}) => (
-            <Route 
-              key={path}
-              path={path}
-              element={element}
-            />
+          routes.map(({path, element}, key) => (
+            <ParallaxLayer key={path} offset={key}>
+              {element}
+            </ParallaxLayer>
           ))
         }
-      </Routes>
-      <Footer />
-    </Router>
+      </Parallax>
+    </div>
   );
 }
 

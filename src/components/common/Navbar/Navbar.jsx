@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './Navbar.css'
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 
@@ -12,33 +12,35 @@ const navBarOptions = [
     },
     {
         text: 'Acerca de mi',
-        to: '/about',
+        to: '/richard_school/about',
         icon: ''
     },
     {
         text: 'Servicios',
-        to: '/services',
+        to: '/richard_school/services',
         icon: ''
     },
     {
         text: 'Experiencia',
-        to: '/experience',
+        to: '/richard_school/experience',
         icon: ''
     },
     {
         text: 'Contacto',
-        to: '/contact',
+        to: '/richard_school/contact',
         icon: ''
     },
 ]
 
-const Navbar = () => {
+const Navbar = ({onNavigate}) => {
     const [showMenu, setShowMenu] = useState(true);
 
-    const handleShowMenu = () => {
+    const handleShowMenu = (i) => {
         if (window.innerWidth < 768) {
             setShowMenu(!showMenu)
         }
+
+        onNavigate(i);
     }
 
     useEffect(() => {
@@ -49,29 +51,26 @@ const Navbar = () => {
 
     return(
         <div className="navbar-container">
-            <NavLink className="navbar-logo" to='/'>
+            <a className="navbar-logo">
                 Richard School
-            </NavLink>
+            </a>
 
             <i
                 id="menu-icon"
-                onClick={handleShowMenu}
+                onClick={() => handleShowMenu(0)}
             >
                 {showMenu ? <FaTimes /> : <FaBars/>}
             </i>
-
-            {showMenu && <nav className="navbar-options">
-                {navBarOptions.map(({text, to, icon}) => (
-                    <NavLink 
+            <nav className="navbar-options">
+                {navBarOptions.map(({text, to, icon}, index) => (
+                    <a 
                         className="navbar-link" 
-                        activeclassname="active" 
-                        onClick={handleShowMenu}
-                        to={to} 
+                        onClick={() => handleShowMenu(index)}
                         key={to}>
                         {text}
-                    </NavLink>
+                    </a>
                 ))}
-            </nav>}
+            </nav>
         </div>
     );
 }

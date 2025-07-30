@@ -5,41 +5,23 @@ import './Experience.css'
 
 const experienceOptions = [
     {
-        img: '/richard_school/vite.svg',
-        title: 'Escuela 1',
+        img: '/richard_school/experience1.jpg',
+        title: 'Escuela',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
         icon: <FaArrowUpRightFromSquare />
     },
     {
-        img: '/richard_school/vite.svg',
-        title: 'Escuela 2',
+        img: '/richard_school/experience2.jpg',
+        title: 'Empresa',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
         icon: <FaArrowUpRightFromSquare />
     },
     {
-        img: '/richard_school/vite.svg',
-        title: 'Escuela 3',
+        img: '/richard_school/experience3.jpg',
+        title: 'Clases personales',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
         icon: <FaArrowUpRightFromSquare />
-    },
-    {
-        img: '/richard_school/vite.svg',
-        title: 'Alumno 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
-        icon: <FaArrowUpRightFromSquare />
-    },
-    {
-        img: '/richard_school/vite.svg',
-        title: 'Alumno 2',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
-        icon: <FaArrowUpRightFromSquare />
-    },
-    {
-        img: '/richard_school/vite.svg',
-        title: 'Alumno 3',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
-        icon: <FaArrowUpRightFromSquare />
-    },
+    }
 ]
 
 const Experience = () => (

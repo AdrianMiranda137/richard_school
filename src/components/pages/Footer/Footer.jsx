@@ -3,19 +3,19 @@ import './Footer.css'
 import { NavLink } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa6";
 
-const Footer = () => (
+const Footer = ({ onNavigate }) => (
     <footer className="footer-container">
         <div className="footer-text">
             <p>Copyright &copy; 2025 by Richard Casolis | All Rights Reserved.</p>
         </div>
 
         <div className="footer-icon-top">
-            <NavLink
+            <a
                 className="footer-link"
-                to='/richard_school'
+                onClick={() => onNavigate(1)}
             >
                 <i><FaArrowUp/></i>
-            </NavLink>
+            </a>
         </div>
     </footer>
 );
