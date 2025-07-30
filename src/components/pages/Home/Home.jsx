@@ -30,7 +30,7 @@ const Home = () => (
         </div>
 
         <div className="home-img">
-            <img src="./richard.png" alt="Richard"/>
+            <img src={'richard_school/richard.png'} alt="Richard"/>
         </div>
     </section>
 );

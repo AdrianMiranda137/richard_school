@@ -5,7 +5,7 @@ import './About.css'
 const AboutMe = () => (
     <section className="about-container">
         <div className="about-img">
-            <img src="./richard2.png" alt="" />
+            <img src="./richard_school/richard2.png" alt="" />
         </div>
 
         <div className="about-content">
