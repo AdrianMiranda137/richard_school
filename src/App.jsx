@@ -7,6 +7,7 @@ import Contact from "./components/pages/Contact/Contact";
 import './App.css'
 import Services from "./components/pages/Services/Services";
 import Experience from "./components/pages/Experience/Experience";
+import Footer from "./components/pages/Footer/Footer";
 
 const routes = [
   {
@@ -47,6 +48,7 @@ const App = () => {
           ))
         }
       </Routes>
+      <Footer />
     </Router>
   );
 }
