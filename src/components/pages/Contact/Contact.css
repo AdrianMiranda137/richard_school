@@ -14,3 +14,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+@media (max-width: 991px) {
+    .contact-container {
+        min-height: auto;
+    }
+}

@@ -9,6 +9,16 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 2rem;
-    height: 60rem;
 }
 
+@media (max-width: 991px) {
+    .services-container {
+        padding-bottom: 7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container h2 {
+        margin-bottom: 3rem;
+    }
+}

@@ -7,3 +7,9 @@ input {
     border-radius: .8rem;
     margin: .7rem 0;
 }
+
+@media (max-width: 450px) {
+    input {
+        width: 100%;
+    }
+}
