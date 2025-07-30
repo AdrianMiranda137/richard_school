@@ -18,6 +18,10 @@
     cursor: default;
 }
 
+.navbar-logo img{
+    height: 2.5rem;
+}
+
 .navbar-link {
     font-size: 1.7rem;
     color: var(--text-color);

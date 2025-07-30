@@ -5,20 +5,20 @@ import './Experience.css'
 
 const experienceOptions = [
     {
-        img: '/richard_school/experience1.jpg',
+        img: '/richard_school/experience2.svg',
+        title: 'Clases Personales',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
+        icon: <FaArrowUpRightFromSquare />
+    },
+    {
+        img: '/richard_school/experience1.svg',
         title: 'Escuela',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
         icon: <FaArrowUpRightFromSquare />
     },
     {
-        img: '/richard_school/experience2.jpg',
+        img: '/richard_school/experience3.svg',
         title: 'Empresa',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
-        icon: <FaArrowUpRightFromSquare />
-    },
-    {
-        img: '/richard_school/experience3.jpg',
-        title: 'Clases personales',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quo earum nobis natus nisi voluptates! Est',
         icon: <FaArrowUpRightFromSquare />
     }

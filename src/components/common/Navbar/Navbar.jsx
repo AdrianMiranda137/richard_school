@@ -54,6 +54,7 @@ const Navbar = ({onNavigate}) => {
     return(
         <div className="navbar-container">
             <a className="navbar-logo">
+                <img src="./richard_school/soldier.png"/>
                 Richard School
             </a>
 

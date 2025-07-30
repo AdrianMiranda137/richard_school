@@ -29,7 +29,7 @@ const Home = () => (
         </div>
 
         <div className="home-img">
-            <img src={'./richard_school/richard.png'} alt="Richard"/>
+            <img src={'./richard_school/teaching_draw.svg'} alt="Richard"/>
         </div>
     </section>
 );

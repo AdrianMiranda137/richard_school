@@ -50,12 +50,9 @@ span {
 }
 
 .home-img img {
-    height: 50rem;
-    width: 50rem;
-    object-fit: cover;
-    border-radius: 50%;
-    object-position: 100% -29px;
     margin: 2rem;
+    height: 35vw;
+    padding: 2rem;
 }
 
 @media (max-width: 768px) {

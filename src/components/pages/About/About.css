@@ -7,8 +7,9 @@
 }
 
 .about-img img {
-    width: 400px;
+    width: 35vw;
     border-radius: 50%;
+    background-color: var(--text-color);
 }
 
 .about-content h2 {
