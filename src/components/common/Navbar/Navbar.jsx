@@ -40,7 +40,9 @@ const Navbar = ({onNavigate}) => {
             setShowMenu(!showMenu)
         }
 
-        onNavigate(i);
+        if(i){
+            onNavigate(i);
+        }
     }
 
     useEffect(() => {
@@ -57,20 +59,22 @@ const Navbar = ({onNavigate}) => {
 
             <i
                 id="menu-icon"
-                onClick={() => handleShowMenu(0)}
+                onClick={() => handleShowMenu(null)}
             >
                 {showMenu ? <FaTimes /> : <FaBars/>}
             </i>
-            <nav className="navbar-options">
-                {navBarOptions.map(({text, to, icon}, index) => (
-                    <a 
-                        className="navbar-link" 
-                        onClick={() => handleShowMenu(index)}
-                        key={to}>
-                        {text}
-                    </a>
-                ))}
-            </nav>
+            {showMenu &&
+                <nav className="navbar-options">
+                    {navBarOptions.map(({text, to, icon}, index) => (
+                        <a 
+                            className="navbar-link" 
+                            onClick={() => handleShowMenu(index)}
+                            key={to}>
+                            {text}
+                        </a>
+                    ))}
+                </nav>
+            }
         </div>
     );
 }
