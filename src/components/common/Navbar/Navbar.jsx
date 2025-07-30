@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Navbar.css'
 import { NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
@@ -33,11 +33,19 @@ const navBarOptions = [
 ]
 
 const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(false);
+    const [showMenu, setShowMenu] = useState(true);
 
     const handleShowMenu = () => {
-        setShowMenu(!showMenu)
+        if (window.innerWidth < 768) {
+            setShowMenu(!showMenu)
+        }
     }
+
+    useEffect(() => {
+        if (window.innerWidth < 768) {
+            setShowMenu(false)
+        }
+    }, []);
 
     return(
         <div className="navbar-container">
