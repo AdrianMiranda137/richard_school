@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const navBarOptions = [
     {
         text: 'Inicio',
-        to: '/',
+        to: '/richard_school',
         icon: ''
     },
     {
@@ -19,8 +19,8 @@ const navBarOptions = [
         icon: ''
     },
     {
-        text: 'Testimonios',
-        to: '/testimonials',
+        text: 'Experiencia',
+        to: '/experience',
         icon: ''
     },
     {

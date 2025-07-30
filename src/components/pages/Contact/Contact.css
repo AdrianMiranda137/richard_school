@@ -1,0 +1,16 @@
+.contact-container h2 {
+    margin-bottom: 3rem;
+}
+
+.contact-container form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-container form .contact-input-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

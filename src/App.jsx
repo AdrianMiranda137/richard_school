@@ -3,13 +3,14 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import Navbar from "./components/common/Navbar/Navbar";
-import Contact from "./components/pages/Contact";
+import Contact from "./components/pages/Contact/Contact";
 import './App.css'
 import Services from "./components/pages/Services/Services";
+import Experience from "./components/pages/Experience/Experience";
 
 const routes = [
   {
-    path: '/',
+    path: '/richard_school',
     element: <Home />
   },
   {
@@ -19,6 +20,14 @@ const routes = [
   {
     path: '/services',
     element: <Services />
+  },
+  {
+    path: '/experience',
+    element: <Experience />
+  },
+  {
+    path: '/contact',
+    element: <Contact />
   },
 ]
 
