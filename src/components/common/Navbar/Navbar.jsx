@@ -41,7 +41,7 @@ const Navbar = ({onNavigate}) => {
             setShowMenu(!showMenu)
         }
 
-        if(i>=0){
+        if(i != null){
             onNavigate(i);
         }
     }
