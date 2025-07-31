@@ -3,32 +3,33 @@ import './Navbar.css'
 import { NavLink, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
+import { FaCircleInfo, FaHouse, FaSuitcase, FaClock, FaEnvelopeOpen } from "react-icons/fa6";
 
 const navBarOptions = [
     {
         text: 'Inicio',
         to: '/richard_school',
-        icon: ''
+        icon: <FaHouse />
     },
     {
         text: 'Acerca de mi',
         to: '/richard_school/about',
-        icon: ''
+        icon: <FaCircleInfo />
     },
     {
         text: 'Servicios',
         to: '/richard_school/services',
-        icon: ''
+        icon: <FaSuitcase />
     },
     {
         text: 'Experiencia',
         to: '/richard_school/experience',
-        icon: ''
+        icon: <FaClock />
     },
     {
         text: 'Contacto',
         to: '/richard_school/contact',
-        icon: ''
+        icon: <FaEnvelopeOpen />
     },
 ]
 
@@ -40,7 +41,7 @@ const Navbar = ({onNavigate}) => {
             setShowMenu(!showMenu)
         }
 
-        if(i){
+        if(i>=0){
             onNavigate(i);
         }
     }
@@ -71,6 +72,9 @@ const Navbar = ({onNavigate}) => {
                             className="navbar-link" 
                             onClick={() => handleShowMenu(index)}
                             key={to}>
+                            <i>
+                                {icon}
+                            </i>
                             {text}
                         </a>
                     ))}
